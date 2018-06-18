@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <title>Trivia Quiz!</title>
+</head>
+
+<body>
+
+    <h1>Fun Quiz!</h1>
+
+    <form id="quiz" name="quiz">
+
+        <input type="button" input id="start" value="Start Game" onclick="start();">
+
+        <div id="wrapper">
+            <div id="counter-number">30 seconds to complete quiz</div>
+            <br>
+            <div id="display">00:00</div>
+            <br>
+            <div id="buttons">
+                <button id="start-over">Reset</button>
+                
+            <div id="endGame">
+                    <div id="done">
+                        <h2>Game Over!!</h2>
+                    </div>
+                    <div id="unanswered"> Unanswered:0</div>
+                    <div id="incorrect"> Incorrect answers:0</div>
+                    <div id="correct">Correct answers:0</div>
+                </div>
+
+            <div class="quizBody" align=center>
+
+                <p>What is the Italian word for pie?</p>
+                <input type="radio" id="q1" class="button" text="bold"name="question1" value="Pizza">Pizza
+                <br>
+                <input type="radio" id="q1" class="button" name="question1" value="Pasta">Pasta
+                <br>
+                <input type="radio" id="q1" class="button" name="question1" value="Donut">Donut
+                <br>
+                <input type="radio" id="q1" class="button" name="question1" value="Cake">Cake
+                <br>
+
+
+                <p>Which sea creature has three hearts?</p>
+                <input type="radio" id="q2" class="button" name="question2" value="Fish">Fish
+                <br>
+                <input type="radio" id="q2" class="button" name="question2" value="Octopus">Octopus
+                <br>
+                <input type="radio" id="q2" class="button" name="question2" value="Shark">Shark
+                <br>
+                <input type="radio" id="q2" class="button" name="question2" value="Whale">Whale
+                <br>
+
+
+                <p>Spinach is high in which mineral?</p>
+                <input type="radio" id="q3" class="button" name="question3" value="Potassium">Potassium
+                <br>
+                <input type="radio" id="q3" class="button" name="question3" value="Calcium">Calcium
+                <br>
+                <input type="radio" id="q3" class="button" name="question3" value="Iron">Iron
+                <br>
+                <input type="radio" id="q3" class="button" name="question3" value="Magnesium">Magnesium
+                <br>
+
+
+                <p>Which fictional city is the home of Batman?</p>
+                <input type="radio" id="q4" class="button" name="question4" value="NewYork">NewYork
+                <br>
+                <input type="radio" id="q4" class="button" name="question4" value="Boston">Boston
+                <br>
+                <input type="radio" id="q4" class="button" name="question4" value="LosAngeles">LosAngeles
+                <br>
+                <input type="radio" id="q4" class="button" name="question4" value="GothamCity">GothamCity
+                <br>
+
+                <button id="submit">Get Results</button>
+
+
+                <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+                <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+</body>
+
+</html>
