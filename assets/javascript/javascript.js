@@ -1,4 +1,4 @@
-//
+
 
 //click start to start game
 
@@ -8,12 +8,11 @@ $(document).on('click', '#start', function(){
 
 });
 
-//Reset on Click (User Action)
+//Reset on Click 
 	$(document).on('click', '#reset', function(){
 	game.reset();
 });
 
-//questions with answers
 
 var randomQuestions = Math.floor(Math.random()*(questions));
 
@@ -44,7 +43,7 @@ correctAnswer: "Aries",
 }];
 
 
-//game object
+
 
 var game = {
 correct:0,
@@ -63,11 +62,7 @@ startGame:function(){
 	timer=setInterval(game.countdown, 1000);
 	$('#start').remove();
 	for (var i = 0; i < questions.length; i++) {
-	$("#panel").append('<h2>' + questions[i].question + '</h2>');
-		for (var j = 0; j < questions[i].answers.length; j++) {
-	$("#panel").append('<input type="radio" name="question' + '-' + i + '" value="' + questions[i].answers[j] + '">' + questions[i].answers[j]);
-
-	 }
+	}
 	}
 },
 timeUP:function() {
@@ -80,47 +75,9 @@ location.reload();
 
 },
 
-done: function(){
-	$.each($("imput[name='answer0']:checked"), function (){
-		console.log("inside")
-		if($(this).val() == questions[0].correctAnswer){
-			game.correct++;
-		}else {
-			game.incorrect++;
-		}
+
 });
-	$.each($("input[name='answer1']:checked"), function () {
-	console.log("inside")
-	if($(this).val() == questions[1].correctAnswer){
-		game.correct++;
-		} else {
-		game.incorrect++;
-	}
-});
-	$.each($("input[name='answer2']:checked"), function () {
-	console.log("inside")
-	if($(this).val() == questions[2].correctAnswer) {
-		game.correct++;
-	} else {
-		game.incorrect++;
-	}
-});
-	$.each($("input[name='answer3']:checked"), function () {
-	console.log("inside")
-	if($(this).val() == questions[3].correctAnswer) {
-		game.correct++;
-	} else {
-		game.incorrect++;
-	}
-});
-	$.each($("input[name='answer4']:checked"), function () {
-	console.log("inside")
-	if($(this).val() == questions[4].correctAnswer) {
-		game.correct++;
-	} else {
-		game.incorrect++;
-	}
-});
+	
 	
 game.result();
 },
